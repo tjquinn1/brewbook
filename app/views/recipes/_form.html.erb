@@ -1,0 +1,47 @@
+
+
+        <%= form_for(@recipe) do |f| %>
+                   <div class="form-group">
+                    <%= f.label :beer_name %>
+                    <%= f.text_field :beer_name, class: "form-control" %>
+                  </div>
+
+                <div class="form-group">
+                <%= f.label :brew_type %>
+                
+                <%= f.select :brew_type, options_for_select(["All Grain","Extract","Partial Mash"]), {}, class: "form-control" %>
+                </div>
+
+                                <div class="form-group">
+                <%= f.label :beer_style %>
+                
+                <%= f.select :beer_style, options_for_select(["American Amber Ale","American Barleywine","Brown Ale", "American IPA", "American Pale Ale", "American Stout", "American Wheat/ Rye", "American Dark Lager", "American Lite Lager", "Baltic Porter", ""]), {}, class: "form-control" %>
+                </div>
+
+          
+
+
+
+
+
+
+
+
+          <% if @recipe.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+
+              <ul>
+              <% @recipe.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+        <% end %>
+

@@ -1,0 +1,19 @@
+// Place all the styles related to the Recipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//colors
+$color_deluge_approx: #8064a2;
+
+.btn-primary {
+	background-color: $color_deluge_approx !important;
+	&:hover {
+		background-color: $color_deluge_approx !important;
+	}
+	&:active {
+		background-color: $color_deluge_approx !important;
+	}
+	&:visited {
+		background-color: $color_deluge_approx !important;
+	}
+}
